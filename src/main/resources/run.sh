@@ -1,0 +1,1 @@
+java -Dwebdriver.gecko.driver=./geckodriver -jar geckorasp.jar

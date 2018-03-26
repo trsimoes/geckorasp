@@ -1,7 +1,8 @@
 package pt.eden.geckorasp;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * @author : trsimoes
@@ -13,7 +14,11 @@ public class MainApp {
 //        FirefoxOptions firefoxOptions = new FirefoxOptions();
 //        firefoxOptions.setBinary(firefoxBinary);
 //        WebDriver driver = new FirefoxDriver(firefoxOptions);
-        WebDriver driver = new FirefoxDriver();
+
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(chromeOptions);
+
         driver.get("http://www.google.com");
         System.out.println("Application title is: " + driver.getTitle());
         driver.quit();

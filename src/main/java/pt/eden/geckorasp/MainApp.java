@@ -21,6 +21,8 @@ public class MainApp {
 
         driver.get("http://www.google.com");
         System.out.println("Application title is: " + driver.getTitle());
+
+        // https://www.mkyong.com/selenium/many-chromedriver-exe-are-left-hanging-on-windows-selenium/
         driver.quit();
     }
 }
